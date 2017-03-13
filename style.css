@@ -1,0 +1,136 @@
+body{
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(178,177,181);
+}
+
+label{
+    font-weight: 700;
+    padding: 1px; 
+    border-radius: 3px;
+    min-width: 50px;
+    width: auto;
+    margin: 2px;
+}
+
+input{
+    padding: 5px;
+    border-radius: 3px;
+    margin: 2px;
+    vertical-align: middle;
+    min-width: 10%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(176,177,181);
+    min-height:25px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+input[type="checkbox"]{
+    padding: 5px;
+    min-width: 15px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 1px;
+}
+
+input[type="color"]{
+    min-width: 10px;
+}
+
+label>input{
+    display: block;
+    margin: 3px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+select{
+    padding: 5px;
+    border-radius: 3px;
+    margin: 2px;
+    vertical-align: middle;
+    min-width: 10%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(176,177,181);
+    min-height:25px;
+}
+ 
+
+/*input[type="checkbox"]{
+    border-radius: 3px;
+    min-width: 20px;
+    vertical-align: middle; 
+}
+
+input[type="number"]{
+    padding: 5px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(176,177,181);
+    border-width: 1px;
+    min-width: 20px;
+    min-height: 25px;
+    vertical-align: middle;
+}
+
+input[type="date"]{
+    padding: 5px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(176,177,181);
+    border-width: 1px;
+    min-width: 20px;
+    min-height: 25px;
+    vertical-align: middle;
+}
+
+input[type="datetime"]{
+    padding: 5px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(176,177,181);
+    border-width: 1px;
+    min-width: 20px;
+    min-height: 25px;
+    vertical-align: middle;
+}
+
+input[type="datetime-local"]{
+    padding: 5px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(176,177,181);
+    border-width: 1px;
+    min-width: 20px;
+    min-height: 25px;
+    vertical-align: middle;
+}
+
+input[type="month"]{
+    padding: 5px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(176,177,181);
+    border-width: 1px;
+    min-width: 20px;
+    min-height: 25px;
+    vertical-align: middle;
+}
+input[type="month"]{
+    padding: 5px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(176,177,181);
+    border-width: 1px;
+    min-width: 20px;
+    min-height: 25px;
+    vertical-align: middle;
+}*/
+
+
+.main div{
+    display: inline-block;
+
+}

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-6">
+        Unsorted array
+        <ul *ngFor="let item of array">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        Sorted array
+        <ul *ngFor="let item of sortedarray">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <canvas>
+        </canvas>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1">
+        <button class="btn btn-primary" (click)="sort()">Sort</button>
+    </div>
+</div>

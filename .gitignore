@@ -1,0 +1,7 @@
+*.d.ts
+app/**/*.js
+app/**/*.js.map
+sample.js
+sample.js.map
+samplet*.*
+node_modules
