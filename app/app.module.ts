@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import { ClosestPair } from './closestPair/closestpair.component';
 import { BubbleSort } from './bubblesort/bubblesort.component';
+import { SelectionSort } from './selectionsort/selectionsort.component';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import { BubbleSort } from './bubblesort/bubblesort.component';
     declarations: [
         AppComponent,
         ClosestPair,
-        BubbleSort
+        BubbleSort,
+        SelectionSort
     ],
     bootstrap: [AppComponent]
 })

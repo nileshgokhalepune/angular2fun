@@ -16,8 +16,10 @@
     </div>
     <div class="col-md-3">
         Sorted array
-        <ul *ngFor="let item of sortedarray" class="list-group">
-            <li class="list-group-item">{{item}}</li>
+        <ul *ngFor="let item of sortedarray;let i = index" class="list-group">
+            <li class="list-group-item"  [ngClass]="{'swap':(first===i || second===i)}">
+                <span>{{item}}</span>
+            </li>
         </ul>
     </div>
     <div class="col-md-3">
