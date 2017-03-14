@@ -1,23 +1,24 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <button class="btn btn-primary" (click)="sort()">Sort</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <ul class="list-group" *ngFor="let item of unsorted">
-                <li class="list-group-item">
-                    {{item}}
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <ul class="list-group" *ngFor="let item of sorted;let i=index">
-                <li class="list-group-item">
-                    <span [ngClass]="{'swap': (i===first || i===second)}"> {{item}}</span>
-                </li>
-            </ul>
-        </div>
+<div class="panel panel-header">
+    <h3>Selection Sort</h3>
+</div>
+
+<div class="col-md-12">
+    <button class="btn btn-primary" (click)="sort()">Sort</button>
+</div>
+<div class="col-md-4 array">
+    <label>Unsorted</label>
+    <ul class="list-group" *ngFor="let item of unsorted">
+        <li class="list-group-item">
+            {{item}}
+        </li>
+    </ul>
+    <div class="col-md-4  array">
+        <label>Sorted</label>
+        <ul class="list-group" *ngFor="let item of sorted;let i=index">
+            <li class="list-group-item" [ngClass]="{'bigger':i===first,'smaller':i===second}">
+                <span>{{item}}</span>
+            </li>
+        </ul>
+        {{temp}}
     </div>
 </div>

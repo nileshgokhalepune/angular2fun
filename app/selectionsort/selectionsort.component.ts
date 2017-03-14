@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     styles: [
         `
         .swap{
-            color:red;
+            background-color:gray;
         }
         `
     ]
@@ -15,6 +15,7 @@ import { Component } from '@angular/core';
 export class SelectionSort {
     private unsorted: any = [7, 4, 9, 14, 2, 6, 15];
     private sorted: any = [];
+    private temp:any;
     private first: any = -1;
     private second: any = -1;
     private async sort() {
@@ -28,15 +29,19 @@ export class SelectionSort {
             }
             await this.sleep(1000);
             this.first = i; this.second = min_idx;
-            this.swap(this.sorted, i, min_idx);
+            await this.swap(this.sorted, i, min_idx);
         }
     }
 
-    private swap(arr: Array<number>, firstidx: number, secondidx: number) {
+    private async swap(arr: Array<number>, firstidx: number, secondidx: number) {
         var firstVal = arr[firstidx]
         var secondVal = arr[secondidx];
-        arr.splice(firstidx, 1, secondVal);
-        arr.splice(secondidx, 1, firstVal);
+        var temp = arr.splice(firstidx, 1, secondVal);
+        this.temp =temp;
+        await this.sleep(1000);
+        temp= arr.splice(secondidx, 1, firstVal);
+        this.temp =temp;
+        await this.sleep(1000);
     }
 
     private sleep(ms: any) {

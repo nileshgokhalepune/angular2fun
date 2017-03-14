@@ -24,7 +24,8 @@ import { Component } from '@angular/core';
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Algorithms<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a [routerLink]="['bubblesort']">Bubble Sort</a></li>                                
-                                <li><a [routerLink]="['selectionsort']">Selection Sort</a></li>                                
+                                <li><a [routerLink]="['selectionsort']">Selection Sort</a></li>                   
+                                <li><a [routerLink]="['insertionsort']">Insertion Sort</a></li>
                             </ul>
                         </li>
                         <li>

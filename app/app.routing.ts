@@ -3,6 +3,7 @@ import { RouterModule, Router, Routes } from '@angular/router';
 import { ClosestPair } from './closestPair/closestpair.component';
 import { BubbleSort } from './bubblesort/bubblesort.component';
 import { SelectionSort } from './selectionsort/selectionsort.component';
+import { InsertionSort } from './insertionsort/insertionsort.component';
 
 const appRoutes: Routes = [
     {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
     {
         path: 'selectionsort',
         component: SelectionSort
+    },
+    {
+        path: 'insertionsort',
+        component: InsertionSort
     },
     {
         path: '',

@@ -16,6 +16,7 @@ export class BubbleSort {
     private array: any = [4, 2, 10, 6, 3, 8];
     private sortedarray: any = [];
     private unsortedValues: any;
+    private temp:any;
     private first: any;
     private second: any;
     private async sort() {
@@ -31,9 +32,14 @@ export class BubbleSort {
                     //swap values
                     this.first = i;
                     this.second = j;
-                    await this.sleep(5000);
+                    await this.sleep(1000);
                     var temp = this.sortedarray[i];
+                    this.sortedarray[i] = null;
+                    this.temp=temp;
+                    await this.sleep(1000);
                     this.sortedarray[i] = this.sortedarray[j];
+                    this.sortedarray[j] = null;
+                    await this.sleep(1000);
                     this.sortedarray[j] = temp;
                 }
             }

@@ -1,29 +1,25 @@
-<div class="row">
-    <div class="col-md-1">
-        <button class="btn btn-primary" (click)="sort()">Sort</button>
-    </div>
+<div class="panel panel-header">
+    <h3>Bubble Sort</h3>
 </div>
-<div class="row">
-    <div class="col-md-3">
-        Enter a list of comma delimited numbers to Sort:<input type="text" class="form-control" [(ngModel)]="unsortedValues"
-        />
-    </div>
-    <div class="col-md-3">
-        Unsorted array
-        <ul *ngFor="let item of array" class="list-group">
-            <li class="list-group-item">{{item}}</li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        Sorted array
-        <ul *ngFor="let item of sortedarray;let i = index" class="list-group">
-            <li class="list-group-item"  [ngClass]="{'swap':(first===i || second===i)}">
-                <span>{{item}}</span>
-            </li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <canvas>
-        </canvas>
-    </div>
+<div class="col-md-1">
+    <button class="btn btn-primary" (click)="sort()">Sort</button>
+</div>
+<div class="col-md-12">
+    Enter a list of comma delimited numbers to Sort:<input type="text" class="form-control" [(ngModel)]="unsortedValues"
+    />
+</div>
+<div class="col-md-3 array">
+    <label>Unsorted</label>
+    <ul *ngFor="let item of array" class="list-group">
+        <li class="list-group-item">{{item}}</li>
+    </ul>
+</div>
+<div class="col-md-3 array">
+    <label>Sorted</label>
+    <ul *ngFor="let item of sortedarray;let i = index" class="list-group">
+        <li class="list-group-item" [ngClass]="{'bigger':first===i,'smaller':second===i}">
+            <span>{{item}}</span>
+        </li>
+    </ul>
+    {{temp}}
 </div>

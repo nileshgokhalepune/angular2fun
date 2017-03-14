@@ -134,7 +134,33 @@ input[type="month"]{
     display: inline-block;
 
 }*/
-
+/*
 .row div{
     display: flex;
+}*/
+.temp{
+    background-color: gray;
+}
+.bigger{
+    background-color:red!important;
+}
+
+.smaller{
+    background-color: green!important;
+}
+.array{
+    margin: 5px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%!important;
+    padding: 0;
+}
+
+.array > ul {
+    display: inline-flex;
+    margin: 2px;
+}
+
+.array > label{
+    width:200px;
 }
