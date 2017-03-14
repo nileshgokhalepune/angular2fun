@@ -12,8 +12,8 @@ export class InsertionSort {
         this.sorted = [];
         this.unsorted.forEach((data: any) => this.sorted.push(parseInt(data)));
         for (var i = 0; i < this.sorted.length - 1; i++) {
-            for (var j = 0; j < this.sorted.length - 1, j++){
-                if (this.sorted[i] > this.sorted[j]) {
+            for (var j = 0; j < this.sorted.length - 1; j++){
+                if (this.sorted[i] > this.sorted[j] && i < j) {
                     var temp = this.sorted.splice(j, 1);
                     this.sorted.unshift(temp[0]);
                     break;
