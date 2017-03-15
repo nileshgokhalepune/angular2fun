@@ -8,4 +8,4 @@ I will try to add the space/time complexity of the said problem, and may be grap
 
 
 Bubble Sort:
-![alt text](https://github.com/nileshgokhalepune/javascriptfun/bubblesort.png "Bubble sort")
+![alt text](https://github.com/nileshgokhalepune/javascriptfun/blob/master/bubblesort.PNG "Bubble sort")
