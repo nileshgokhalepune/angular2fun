@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">INGRAM</a>
+                    <a class="navbar-brand" href="#">Fun</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->

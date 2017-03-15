@@ -42,6 +42,7 @@ export class SelectionSort {
         temp= arr.splice(secondidx, 1, firstVal);
         this.temp =temp;
         await this.sleep(1000);
+        this.temp=null;
     }
 
     private sleep(ms: any) {

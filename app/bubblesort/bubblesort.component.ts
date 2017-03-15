@@ -41,6 +41,7 @@ export class BubbleSort {
                     this.sortedarray[j] = null;
                     await this.sleep(1000);
                     this.sortedarray[j] = temp;
+                    this.temp=null;
                 }
             }
         }

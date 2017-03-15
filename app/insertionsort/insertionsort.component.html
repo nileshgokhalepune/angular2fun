@@ -17,6 +17,11 @@
         </ul>
     </div>
     <div class="col-md-4 array">
+        <ul class="list-group" *ngFor="let item of sorted;let i=index">
+            <li class="list-group-item">{{item}}</li>
+        </ul>
+    </div>
+    <div class="col-md-4 array">
         <ul class="list-group">
             <li class="list-group-item"></li>
         </ul>

@@ -138,6 +138,15 @@ input[type="month"]{
 .row div{
     display: flex;
 }*/
+.background1{
+    background-color: gray;
+}
+.background2{
+    background-color:green;
+}
+background3{
+    background-color:red;   
+}
 .temp{
     background-color: gray;
 }
