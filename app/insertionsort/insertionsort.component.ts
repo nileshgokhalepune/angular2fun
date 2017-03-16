@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class InsertionSort {
     private unsorted: any = [9, 7, 6, 15, 16, 5, 10, 11];
     private sorted: Array<any> = [];
+    private unsortedValues: any;
     private carriedOver: string;
     private delay: any;
+    private size: any;
     private pos: any = -1;
     private insertpos: any = -1;
     private code: string = `
@@ -32,12 +34,11 @@ export class InsertionSort {
             f(N) = N (3 + 1 + N( 1 + 2 + 1 + 1 + 1) + 1 )
                    N (4 + N(6) + 1)
                    N (5 + N(6))
-                   N (5N(6))
-                   5N + N<sup>2</sup>(6)
+                   Drop all constants and low order terms
+             f(N)= N2
             `;
-
+    ///5,22,15,2,4,16,12,10,7,14
     private async sort() {
-        if (!this.delay) this.delay = 1000;
         this.sorted = [];
         this.unsorted.forEach((data: any) => this.sorted.push(parseInt(data)));
         for (var i = 0; i < this.sorted.length - 1; i++) {
@@ -64,6 +65,21 @@ export class InsertionSort {
         }
         this.pos = -1;
         this.insertpos = -1;
+    }
+
+    private changeUnsorted() {
+        if (this.unsortedValues && this.unsortedValues.length > 0) {
+            this.unsorted = [];
+            this.unsortedValues.split(',').forEach((data: any) => this.unsorted.push(parseInt(data)));
+        }
+    }
+
+
+    private randomGenerator() {
+        this.unsorted = [];
+        for (var i = 0; i < this.size; i++) {
+            this.unsorted.push(parseInt(((Math.random() * 100) + 1).toString()));
+        }
     }
 
     private sleep(ms: any) {

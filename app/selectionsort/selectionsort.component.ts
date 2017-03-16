@@ -14,8 +14,10 @@ import { Component } from '@angular/core';
 })
 export class SelectionSort {
     private unsorted: any = [7, 4, 9, 14, 2, 6, 15];
+    private unsortedValues: any;
     private sorted: any = [];
-    private temp:any;
+    private delay:any;
+    private temp: any;
     private first: any = -1;
     private second: any = -1;
     private async sort() {
@@ -27,7 +29,7 @@ export class SelectionSort {
                 if (this.sorted[j] < this.sorted[min_idx])
                     min_idx = j;
             }
-            await this.sleep(1000);
+            await this.sleep(this.delay);
             this.first = i; this.second = min_idx;
             await this.swap(this.sorted, i, min_idx);
         }
@@ -37,12 +39,19 @@ export class SelectionSort {
         var firstVal = arr[firstidx]
         var secondVal = arr[secondidx];
         var temp = arr.splice(firstidx, 1, secondVal);
-        this.temp =temp;
-        await this.sleep(1000);
-        temp= arr.splice(secondidx, 1, firstVal);
-        this.temp =temp;
-        await this.sleep(1000);
-        this.temp=null;
+        this.temp = temp;
+        await this.sleep(this.delay);
+        temp = arr.splice(secondidx, 1, firstVal);
+        this.temp = temp;
+        await this.sleep(this.delay);
+        this.temp = null;
+    }
+
+    private changeUnsorted() {
+        if (this.unsortedValues && this.unsortedValues.length > 1) {
+            this.unsorted = [];
+            this.unsortedValues.split(',').forEach((data: any) => this.unsorted.push(parseInt(data)));
+        }
     }
 
     private sleep(ms: any) {

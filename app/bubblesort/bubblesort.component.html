@@ -1,25 +1,33 @@
 <div class="panel panel-header">
     <h3>Bubble Sort</h3>
 </div>
-<div class="col-md-1">
-    <button class="btn btn-primary" (click)="sort()">Sort</button>
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-primary" (click)="sort()">Sort</button>
+        <button class="btn btn-danger" (click)="randomGenerator()">Create random numbers</button>
+        <input type="number" placeholder="Enter size of array" [(ngModel)]="size" />
+    </div>
+    <div class="col-md-4">
+        Enter a list of comma delimited numbers to Sort:<input type="text" class="form-control" [(ngModel)]="unsortedValues" (blur)="changeUnsorted()"/>
+    </div>
+    <div class="col-md-4">
+        Delay Animation in milliseconds(1000ms = 1sec): <input type="number" class="form-control" [(ngModel)]="delay" />
+    </div>
 </div>
-<div class="col-md-12">
-    Enter a list of comma delimited numbers to Sort:<input type="text" class="form-control" [(ngModel)]="unsortedValues"
-    />
-</div>
-<div class="col-md-3 array">
-    <label>Unsorted</label>
-    <ul *ngFor="let item of array" class="list-group">
-        <li class="list-group-item">{{item}}</li>
-    </ul>
-</div>
-<div class="col-md-3 array">
-    <label>Sorted</label>
-    <ul *ngFor="let item of sortedarray;let i = index" class="list-group">
-        <li class="list-group-item" [ngClass]="{'bigger':first===i,'smaller':second===i}">
-            <span>{{item}}</span>
-        </li>
-    </ul>
-    {{temp}}
+<div class="row">
+    <div class="col-md-6 array">
+        <ul *ngFor="let item of array" class="list-group">
+            <li class="list-group-item">{{item}}</li>
+        </ul>
+    </div>
+    <div class="col-md-6 array">
+        <ul *ngFor="let item of sortedarray;let i = index" class="list-group">
+            <li class="list-group-item" [ngClass]="{'bigger':first===i,'smaller':second===i}">
+                <span>{{item}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        Swapping {{temp}}
+    </div>
 </div>
