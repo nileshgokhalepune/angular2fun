@@ -1,15 +1,18 @@
 <div class="panel panel-header">
     <h3>Insertion Sort</h3>
 </div>
-<div class="row">
+<div class="row-fluid">
     <div class="col-md-12">
         <button class="btn btn-primary" (click)="sort()">Sort</button>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
         Enter a list of comma delimited numbers to Sort:<input type="text" class="form-control" [(ngModel)]="unsortedValues"
         />
+    </div>
+    <div class="col-md-4">
+        Delay Animation in milliseconds(1000ms = 1sec): <input type="number" class="form-control" [(ngModel)]="delay" />
     </div>
     <div class="col-md-4 array">
         <ul class="list-group" *ngFor="let item of unsorted;let i=index">
@@ -23,7 +26,8 @@
     </div>
     <div class="col-md-4 array">
         <ul class="list-group">
-            <li class="list-group-item"></li>
+            <li *ngIf="pos>-1" class="list-group-item">remove <span class="lbl lbl-success">{{carriedOver}}</span> from {{pos}}<sup>th</sup> position and insert it
+                in {{insertpos}}<sup>th</sup> position</li>
         </ul>
     </div>
 </div>
