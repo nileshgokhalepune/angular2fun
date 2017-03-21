@@ -1,6 +1,10 @@
 # javascriptfun
 This is a repository to just have fun with javascript.
 
+To Install
+    1. Clone the repository
+    2. npm Install
+    3. npm start
 
 This is a simple angular 2 application developed to try out different code challenges, like algorithms (sorting,search) etc, 
 or Maths (Fibonacci, GCF) etc. 
