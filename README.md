@@ -1,7 +1,7 @@
 # javascriptfun
 This is a repository to just have fun with javascript.
 
-To Install
+To Run
 1. Clone the repository
 2. npm Install
 3. npm start
