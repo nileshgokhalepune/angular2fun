@@ -12,6 +12,7 @@ export class InsertionSort {
     private carriedOver: string;
     private delay: any;
     private size: any;
+    private showCode: boolean = true;
     private pos: any = -1;
     private insertpos: any = -1;
     private code: string = `
@@ -39,8 +40,10 @@ export class InsertionSort {
             `;
     ///5,22,15,2,4,16,12,10,7,14
     private async sort() {
+        this.showCode = false;
         this.sorted = [];
         this.unsorted.forEach((data: any) => this.sorted.push(parseInt(data)));
+        this.unsorted = [];
         for (var i = 0; i < this.sorted.length - 1; i++) {
             var j = 0;
             while (j < this.sorted.length) {
@@ -65,6 +68,7 @@ export class InsertionSort {
         }
         this.pos = -1;
         this.insertpos = -1;
+        this.showCode = true;
     }
 
     private changeUnsorted() {
@@ -76,6 +80,10 @@ export class InsertionSort {
 
 
     private randomGenerator() {
+        if (!this.size || this.size <= 1) {
+            alert('Size must be greater that 2');
+            return;
+        }
         this.unsorted = [];
         for (var i = 0; i < this.size; i++) {
             this.unsorted.push(parseInt(((Math.random() * 100) + 1).toString()));

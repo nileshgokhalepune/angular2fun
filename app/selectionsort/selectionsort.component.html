@@ -4,6 +4,8 @@
 <div class="row">
     <div class="col-md-12">
         <button class="btn btn-primary" (click)="sort()">Sort</button>
+        <button class="btn btn-danger" (click)="randomGenerator()">Create random numbers</button>
+        <input type="number" placeholder="Enter size of array" [(ngModel)]="size" />
     </div>
 </div>
 <div class="row">
@@ -16,15 +18,13 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-4 array">
-        <label>Unsorted</label>
+    <div class="col-md-4 array"> 
         <ul class="list-group" *ngFor="let item of unsorted">
             <li class="list-group-item">
                 {{item}}
             </li>
         </ul>
-        <div class="col-md-4  array">
-            <label>Sorted</label>
+        <div class="col-md-4  array"> 
             <ul class="list-group" *ngFor="let item of sorted;let i=index">
                 <li class="list-group-item" [ngClass]="{'bigger':i===first,'smaller':i===second}">
                     <span>{{item}}</span>

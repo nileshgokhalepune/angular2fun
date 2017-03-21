@@ -26,6 +26,7 @@ import { Component } from '@angular/core';
                                 <li><a [routerLink]="['bubblesort']">Bubble Sort</a></li>                                
                                 <li><a [routerLink]="['selectionsort']">Selection Sort</a></li>                   
                                 <li><a [routerLink]="['insertionsort']">Insertion Sort</a></li>
+                                <li><a [routerLink]="['mergesort']">Merge Sort</a></li>
                             </ul>
                         </li>
                         <li>
