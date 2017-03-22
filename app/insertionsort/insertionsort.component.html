@@ -36,10 +36,17 @@
     <div class="row" *ngIf="showCode">
         <div class="col-md-12">
             <pre>
-            <code class="javascript">
-                {{code}}
-            </code>
-        </pre>
+                <code class="javascript">
+                    {{code}}
+                </code>
+            </pre>
+            
+            Let Length of array be N<br>
+            f(N) = N (3 + 1 + N( 1 + 2 + 1 + 1 + 1) + 1 )<br>
+                   N (4 + N(6) + 1)<br>
+                   N (5 + N(6))<br>
+                   Drop all constants and low order terms<br>
+             f(N)= N<sup>2</sup><br>
         </div>
     </div>
 </div>

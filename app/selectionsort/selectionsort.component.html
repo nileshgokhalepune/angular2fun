@@ -18,13 +18,13 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-4 array"> 
+    <div class="col-md-4 array">
         <ul class="list-group" *ngFor="let item of unsorted">
             <li class="list-group-item">
                 {{item}}
             </li>
         </ul>
-        <div class="col-md-4  array"> 
+        <div class="col-md-4  array">
             <ul class="list-group" *ngFor="let item of sorted;let i=index">
                 <li class="list-group-item" [ngClass]="{'bigger':i===first,'smaller':i===second}">
                     <span>{{item}}</span>
@@ -34,5 +34,14 @@
         <div class="col-md-4">
             {{temp}}
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <pre>
+            <code class="javascript">
+                {{code}}
+            </code>
+        </pre>
     </div>
 </div>

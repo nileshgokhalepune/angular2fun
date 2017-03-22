@@ -30,13 +30,6 @@ export class InsertionSort {
                     }
                 } 
             }
-            
-            Let Length of array be N
-            f(N) = N (3 + 1 + N( 1 + 2 + 1 + 1 + 1) + 1 )
-                   N (4 + N(6) + 1)
-                   N (5 + N(6))
-                   Drop all constants and low order terms
-             f(N)= N2
             `;
     ///5,22,15,2,4,16,12,10,7,14
     private async sort() {

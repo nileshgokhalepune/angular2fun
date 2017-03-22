@@ -21,6 +21,22 @@ export class SelectionSort {
     private temp: any;
     private first: any = -1;
     private second: any = -1;
+    private code:string = `
+            private async sort() {
+                for (var i = 0; i < this.sorted.length - 1; i++) {
+                    var min_idx = i;
+                    for (var j = i; j < this.sorted.length; j++) {
+                        if (this.sorted[j] < this.sorted[min_idx])
+                            min_idx = j;
+                    }
+                    this.first = i; this.second = min_idx;
+                    var firstVal = arr[firstidx]
+                    var secondVal = arr[secondidx];
+                    arr.splice(firstidx, 1, secondVal);
+                    arr.splice(secondidx, 1, firstVal);
+                }
+            }
+    `
     private async sort() {
         this.sorted = [];
         this.unsorted.forEach((data: any) => this.sorted.push(parseInt(data)));
