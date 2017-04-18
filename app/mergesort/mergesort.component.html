@@ -31,6 +31,7 @@
                 <li *ngIf="pos>-1" class="list-group-item">remove <span class="lbl lbl-success">{{carriedOver}}</span> from {{pos}}<sup>th</sup> position and insert
                     it in {{insertpos}}<sup>th</sup> position</li>
             </ul>
+            {{mergeSortCount}}
         </div>
     </div>
     <div class="row" *ngIf="showCode">
