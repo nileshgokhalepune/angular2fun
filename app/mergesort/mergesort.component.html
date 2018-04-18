@@ -23,15 +23,31 @@
         </div>
         <div class="col-md-4 array">
             <ul class="list-group" *ngFor="let item of sorted;let i=index">
-                <li class="list-group-item">{{item}}</li>
+                <li class="list-group-item" [ngClass]="{'bigger': item===actualLeft,'smaller': item === actualRight }">{{item}}</li>
             </ul>
         </div>
+        <div>
+            {{actualLeft}} and {{actualRight}}
+        </div>
         <div class="col-md-4 array">
+            Left Array:
             <ul class="list-group">
-                <li *ngIf="pos>-1" class="list-group-item">remove <span class="lbl lbl-success">{{carriedOver}}</span> from {{pos}}<sup>th</sup> position and insert
-                    it in {{insertpos}}<sup>th</sup> position</li>
-            </ul>
-            {{mergeSortCount}}
+                <li class="list-group-item" *ngFor="let item of leftDiv;let i=index">
+                    <div>
+                        {{item}}
+                    </div>
+                </li>
+            </ul> 
+        </div>
+        <div class="col-md-4 array">
+            Right Array:
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let item of rightDiv;let i=index">
+                    <div>
+                        {{item}}
+                    </div>
+                </li>
+            </ul> 
         </div>
     </div>
     <div class="row" *ngIf="showCode">
